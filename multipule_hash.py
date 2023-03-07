@@ -23,7 +23,7 @@ def key_compiling(word):
 def multiple_hash(word, m): # хэширование умножением
     key = key_compiling(word)
     c = 0.115555
-    id = m * ((key * c) % 1)
+    id = int(m * ((key * c) % 1))
     return id
 
 # dictionary[new_key] = dictionary.pop(old_key)
